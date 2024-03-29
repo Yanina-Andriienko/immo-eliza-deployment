@@ -4,10 +4,6 @@ from PIL import Image
 
 
 # Custom CSS
-
-image_path = 'image.jpeg'
-image = Image.open(image_path)
-
 st.markdown("""
     <style>
     /* Background color */
@@ -26,14 +22,17 @@ st.markdown("""
 st.title('Immo Eliza Property Price Prediction')
 
 # Create two columns for the image and the text with a new layout
-col1, col2 = st.columns([2, 3])  # Adjust the column ratios here as needed
+col1, col2 = st.columns([1, 2])  # Adjust the column ratios here as needed
 
 # Load and display image in the first column
+# Make sure the image is in the same directory as your streamlit_app.py or adjust the path accordingly
 image_path = 'image.jpeg'
-image = Image.open(image_path)
-
 with col1:
-    st.image(image)
+    try:
+        image = Image.open(image_path)
+        st.image(image)
+    except FileNotFoundError:
+        st.error(f"Image not found at {image_path}")
 
 with col2:
     st.markdown("""
