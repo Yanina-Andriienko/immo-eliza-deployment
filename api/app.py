@@ -123,6 +123,11 @@ app = FastAPI()
 model = joblib.load('random_forest_model.joblib')
 
 
+@app.get("/")
+async def root():
+    return {"message": "alive"}
+
+
 @app.post("/predict")
 async def predict_price(details: PropertyDetails):
     try:
