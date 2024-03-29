@@ -25,14 +25,13 @@ st.title('Immo Eliza Property Price Prediction')
 col1, col2 = st.columns([1, 2])  # Adjust the column ratios here as needed
 
 # Load and display image in the first column
-# Make sure the image is in the same directory as your streamlit_app.py or adjust the path accordingly
-image_path = 'image.jpeg'
-with col1:
-    try:
-        image = Image.open(image_path)
-        st.image(image)
-    except FileNotFoundError:
-        st.error(f"Image not found at {image_path}")
+# image_path = 'image.jpeg'
+# with col1:
+#     try:
+#         image = Image.open(image_path)
+#         st.image(image)
+#     except FileNotFoundError:
+#         st.error(f"Image not found at {image_path}")
 
 with col2:
     st.markdown("""
