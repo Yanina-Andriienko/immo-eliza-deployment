@@ -8,6 +8,7 @@ This project aims to deploy a machine learning model to predict property prices 
 - [🏗 Architecture](#architecture)
 - [📄 API Documentation](#api-documentation)
 - [🖥 Web Application](#web-application)
+- [🔗 Web Application Links](#web-application-links)
 - [🚀 Getting Started](#getting-started)
   - [💻 Prerequisites](#prerequisites)
   - [🛠 Installation](#installation)
@@ -41,6 +42,11 @@ The API accepts JSON formatted input and returns the estimated property price. D
 ## 🖥 Web Application
 
 The Streamlit application provides a user-friendly interface to input property details and receive price predictions without needing to interact with the API directly.
+
+## 🔗 Web Application Links
+
+- [Streamlit Application](https://immo-eliza-deployment-ku5bxysnwsufdb5wurjwgc.streamlit.app/)
+- [API Documentation on Render](https://immo-eliza-deployment-2-4ylo.onrender.com/docs)
 
 ## 🚀 Getting Started
 
