@@ -112,11 +112,24 @@ if submitted:
 
     # Endpoint of API
 
-    url = 'http://localhost:8000/predict'
+    # url = 'http://localhost:8000/predict'
 
-    # Make the POST request
+    # # Make the POST request
+    # response = requests.post(url, json=payload)
+
+    # if response.status_code == 200:
+    #     prediction = response.json()['prediction']
+    #     st.success(f"Estimated Property Price: €{prediction}")
+    # else:
+    #     st.error("Error in prediction")
+
+    # Endpoint of the FastAPI service for predictions
+    url = 'https://immo-eliza-deployment-1-tq9w.onrender.com/docs'
+
+    # Make the POST request with the appropriate payload
     response = requests.post(url, json=payload)
 
+    # Process the response
     if response.status_code == 200:
         prediction = response.json()['prediction']
         st.success(f"Estimated Property Price: €{prediction}")
