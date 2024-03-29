@@ -124,7 +124,7 @@ if submitted:
     #     st.error("Error in prediction")
 
     # Endpoint of the FastAPI service for predictions
-    url = 'https://immo-eliza-deployment-1-tq9w.onrender.com/docs#/default/predict_price_predict_post'
+    url = 'https://immo-eliza-deployment-1-tq9w.onrender.com/docs#/default'
 
     # Make the POST request with the appropriate payload
     response = requests.post(url, json=payload)
